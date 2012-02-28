@@ -5,6 +5,12 @@
   <%= @form.grade %>
 </p>
 
-
+<% unless @form.skills.empty? %>
+        <table class="skills" summary="Form skills">
+          <%= render @skills %>
+        </table>
+        <%= will_paginate @skills %>
+      <% end %>
+      
 <%= link_to 'Edit', edit_form_path(@form) %> |
 <%= link_to 'Back', forms_path %>

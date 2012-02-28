@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120215111850) do
+ActiveRecord::Schema.define(:version => 20120228125542) do
 
   create_table "forms", :force => true do |t|
     t.string   "grade"
@@ -19,9 +19,9 @@ ActiveRecord::Schema.define(:version => 20120215111850) do
     t.datetime "updated_at"
   end
 
-  create_table "levels", :force => true do |t|
+  create_table "skills", :force => true do |t|
+    t.string   "name"
     t.integer  "form_id"
-    t.string   "class"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

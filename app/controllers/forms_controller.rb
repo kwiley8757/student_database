@@ -14,7 +14,7 @@ class FormsController < ApplicationController
   # GET /forms/1.xml
   def show
     @form = Form.find(params[:id])
-
+    @skills = @form.skills.paginate(:page=> params[:page])
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @form }
