@@ -14,7 +14,7 @@ class SkillsController < ApplicationController
   # GET /skills/1.xml
   def show
     @skill = Skill.find(params[:id])
-
+    @students = @skill.students.paginate(:page=> params[:page])
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @skill }

@@ -1,4 +1,6 @@
 StudentDatabase::Application.routes.draw do
+  resources :students
+
   resources :skills
 
   resources :forms

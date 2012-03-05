@@ -6,12 +6,27 @@
 </p>
 
 <p>
-  <b>ID:</b>
+  <b>Form ID:</b>
   <%= @skill.form_id %>
 </p>
 
+<% unless @skill.students.empty? %>
+        <table class="students" summary="Students">
+            <tr>
+            <th>Name</th>
+            <th>Class</th>
+            <th>Favorite Food</th>
+            <th>Favorite Person</th>
+            <th></th>
+            <th></th>
+            <th></th>
+            </tr>
+          <%= render @students %>
+        </table>
+        <%= will_paginate @students %>
+      <% end %>
 
 <%= link_to 'Edit', edit_skill_path(@skill) %> |
+<%= link_to 'Full list of students', students_path %> |
 <%= link_to 'Full list of classes', skills_path %> |
 <%= link_to 'List of Forms', forms_path %>
-

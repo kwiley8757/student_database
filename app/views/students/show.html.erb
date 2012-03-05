@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @student.name %>
+</p>
+
+<p>
+  <b>Class:</b>
+  <%= @student.kelas %>
+</p>
+
+<p>
+  <b>Favorite Food:</b>
+  <%= @student.food %>
+</p>
+
+<p>
+  <b>Favorite Person:</b>
+  <%= @student.person %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @student.notes %>
+</p>
+
+<p>
+  <b>Skill ID:</b>
+  <%= @student.skill_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_student_path(@student) %> |
+<%= link_to 'Full list of students', students_path %> |
+<%= link_to 'Full list of classes', skills_path %> |
+<%= link_to 'List of Forms', forms_path %>
