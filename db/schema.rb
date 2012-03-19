@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120319093621) do
+ActiveRecord::Schema.define(:version => 20120319114417) do
 
   create_table "forms", :force => true do |t|
     t.string   "grade"
@@ -35,6 +35,10 @@ ActiveRecord::Schema.define(:version => 20120319093621) do
     t.integer  "skill_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
 end

@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<% if @student.photo.exists? then %>
+	<%= image_tag @student.photo.url(:small) %>
+<% end %>
 <p>
   <b>Name:</b>
   <%= @student.name %>
