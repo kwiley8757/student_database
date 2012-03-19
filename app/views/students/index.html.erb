@@ -3,9 +3,9 @@
 <table>
   <tr>
     <th>Name</th>
+    <th>Nickname</th>
     <th>Class</th>
     <th>Favorite Food</th>
-    <th>Favorite Person</th>
     <th>Notes</th>
     <th>Skill ID</th>
     <th></th>
@@ -16,9 +16,9 @@
 <% @students.each do |student| %>
   <tr>
     <td><%= student.name %></td>
+    <td><%= student.nickname %></td>
     <td><%= student.kelas %></td>
     <td><%= student.food %></td>
-    <td><%= student.person %></td>
     <td><%= student.notes %></td>
     <td><%= student.skill_id %></td>
     <td><%= link_to 'Show', student %></td>
